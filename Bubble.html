@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h1 style="text-align: center;">BUBBLES APP</h1>
+
+  <style>
+    canvas {
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      top: 80px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="myCanvas" width="500" height="400"></canvas>
+  <script>
+    window.requestAnimationFrame = window.requestAnimationFrame || function (callback) {
+      setTimeout(callback, 1000 / 60);
+    };
+
+    var canvas = document.getElementById("myCanvas");              
+    var ctx = canvas.getContext("2d");
+    var x = 400;
+    var y = 50;
+
+
+    function drawArrow() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw circles
+      ctx.beginPath();
+      ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 150, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 250, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 350, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "green";
+      ctx.fill();
+
+      // Draw arrow
+      ctx.beginPath();
+      ctx.moveTo(450, 50);
+      ctx.lineTo(400, 50);
+      ctx.lineTo(410, 40);
+      ctx.moveTo(400, 50);
+      ctx.lineTo(410, 60);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 150);
+      ctx.lineTo(400, 150);
+      ctx.lineTo(410, 140);
+      ctx.moveTo(400, 150);
+      ctx.lineTo(410, 160);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 250);
+      ctx.lineTo(400, 250);
+      ctx.lineTo(410, 240);
+      ctx.moveTo(400, 250);
+      ctx.lineTo(410, 260);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 350);
+      ctx.lineTo(400, 350);
+      ctx.lineTo(410, 340);
+      ctx.moveTo(400, 350);
+      ctx.lineTo(410, 360);
+      ctx.stroke();
+    }
+
+
+    drawArrow();
+
+    var a1 = 450;
+    var a2 = 400;
+    var a3 = 410;
+    var a4 = 400;
+    var a5 = 410;
+
+    var b1 = 450;
+    var b2 = 400;
+    var b3 = 410;
+    var b4 = 400;
+    var b5 = 410;
+
+    var c1 = 450;
+    var c2 = 400;
+    var c3 = 410;
+    var c4 = 400;
+    var c5 = 410;
+
+    var d1 = 450;
+    var d2 = 400;
+    var d3 = 410;
+    var d4 = 400;
+    var d5 = 410;
+
+    function changeArrowA() {
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw circles
+      ctx.beginPath();
+      ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 150, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 250, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 350, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "green";
+      ctx.fill();
+
+      if (a1 == 140) {
+        a1 = 450;
+        a2 = 400;
+        a3 = 410;
+        a4 = 400;
+        a5 = 410;
+      }
+
+      a1 -= 1;
+      a2 -= 1;
+      a3 -= 1;
+      a4 -= 1;
+      a5 -= 1;
+
+      ctx.beginPath();
+      ctx.moveTo(a1, 50);
+      ctx.lineTo(a2, 50);
+      ctx.lineTo(a3, 40);
+      ctx.moveTo(a4, 50);
+      ctx.lineTo(a5, 60);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 150);
+      ctx.lineTo(400, 150);
+      ctx.lineTo(410, 140);
+      ctx.moveTo(400, 150);
+      ctx.lineTo(410, 160);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 250);
+      ctx.lineTo(400, 250);
+      ctx.lineTo(410, 240);
+      ctx.moveTo(400, 250);
+      ctx.lineTo(410, 260);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 350);
+      ctx.lineTo(400, 350);
+      ctx.lineTo(410, 340);
+      ctx.moveTo(400, 350);
+      ctx.lineTo(410, 360);
+      ctx.stroke();
+    }
+
+    function changeArrowB() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw circles
+      ctx.beginPath();
+      ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 150, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 250, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 350, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "green";
+      ctx.fill();
+
+      if (b1 == 140) {
+        b1 = 450;
+        b2 = 400;
+        b3 = 410;
+        b4 = 400;
+        b5 = 410;
+      }
+
+      b1 -= 1;
+      b2 -= 1;
+      b3 -= 1;
+      b4 -= 1;
+      b5 -= 1;
+
+      ctx.beginPath();
+      ctx.moveTo(450, 50);
+      ctx.lineTo(400, 50);
+      ctx.lineTo(410, 40);
+      ctx.moveTo(400, 50);
+      ctx.lineTo(410, 60);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(b1, 150);
+      ctx.lineTo(b2, 150);
+      ctx.lineTo(b3, 140);
+      ctx.moveTo(b4, 150);
+      ctx.lineTo(b5, 160);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 250);
+      ctx.lineTo(400, 250);
+      ctx.lineTo(410, 240);
+      ctx.moveTo(400, 250);
+      ctx.lineTo(410, 260);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 350);
+      ctx.lineTo(400, 350);
+      ctx.lineTo(410, 340);
+      ctx.moveTo(400, 350);
+      ctx.lineTo(410, 360);
+      ctx.stroke();
+    }
+
+    function changeArrowC() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw circles
+      ctx.beginPath();
+      ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 150, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 250, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 350, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "green";
+      ctx.fill();
+
+      if (c1 == 140) {
+        c1 = 450;
+        c2 = 400;
+        c3 = 410;
+        c4 = 400;
+        c5 = 410;
+      }
+
+      c1 -= 1;
+      c2 -= 1;
+      c3 -= 1;
+      c4 -= 1;
+      c5 -= 1;
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 50);
+      ctx.lineTo(400, 50);
+      ctx.lineTo(410, 40);
+      ctx.moveTo(400, 50);
+      ctx.lineTo(410, 60);
+      ctx.stroke();
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 150);
+      ctx.lineTo(400, 150);
+      ctx.lineTo(410, 140);
+      ctx.moveTo(400, 150);
+      ctx.lineTo(410, 160);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(c1, 250);
+      ctx.lineTo(c2, 250);
+      ctx.lineTo(c3, 240);
+      ctx.moveTo(c4, 250);
+      ctx.lineTo(c5, 260);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(450, 350);
+      ctx.lineTo(400, 350);
+      ctx.lineTo(410, 340);
+      ctx.moveTo(400, 350);
+      ctx.lineTo(410, 360);
+      ctx.stroke();
+    }
+
+    function changeArrowD() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Draw circles
+      ctx.beginPath();
+      ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "yellow";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 150, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 250, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "red";
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(50, 350, 40, 0, 2 * Math.PI);
+      ctx.fillStyle = "green";
+      ctx.fill();
+
+
+      if (d1 == 140) {
+        d1 = 450;
+        d2 = 400;
+        d3 = 410;
+        d4 = 400;
+        d5 = 410;
+      }
+
+      d1 -= 1;
+      d2 -= 1;
+      d3 -= 1;
+      d4 -= 1;
+      d5 -= 1;
+
+
+
+      ctx.beginPath();
+      ctx.moveTo(450, 50);
+      ctx.lineTo(400, 50);
+      ctx.lineTo(410, 40);
+      ctx.moveTo(400, 50);
+      ctx.lineTo(410, 60);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(450, 150);
+      ctx.lineTo(400, 150);
+      ctx.lineTo(410, 140);
+      ctx.moveTo(400, 150);
+      ctx.lineTo(410, 160);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(450, 250);
+      ctx.lineTo(400, 250);
+      ctx.lineTo(410, 240);
+      ctx.moveTo(400, 250);
+      ctx.lineTo(410, 260);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(d1, 350);
+      ctx.lineTo(d2, 350);
+      ctx.lineTo(d3, 340);
+      ctx.moveTo(d4, 350);
+      ctx.lineTo(d5, 360);
+      ctx.stroke();
+
+    }
+
+    function moveArrow() {
+      var animationId;
+      var interval;
+      x = 400;
+
+      function updatePosition() {
+        x -= 1;
+        if (x >= 90) {
+          if (y >= 10 && y <= 90) {
+            console.log(y);
+            y = 50;
+            console.log("calling a")
+            changeArrowA();
+          }
+          else if (y >= 110 && y <= 190) {
+            y = 150;
+            console.log("calling b")
+            changeArrowB();
+          }
+          else if (y >= 210 && y <= 290) {
+            y = 250;
+            console.log("calling c")
+            changeArrowC();
+          }
+          else if (y >= 310 && y <= 390) {
+            y = 350;
+            console.log("calling d")
+            changeArrowD();
+          }
+        }
+
+
+        if (x <= 90) {
+          // Change circle color
+          ctx.beginPath();
+          ctx.arc(50, y, 40, 0, 2 * Math.PI);
+          ctx.fillStyle = "grey";
+          ctx.fill();
+          cancelAnimationFrame(animationId);  // Cancel the animation
+        }
+
+        if (x <= 88) {
+          return;
+        }
+        animationId = requestAnimationFrame(updatePosition); // Schedule the next update
+      }
+      animationId = requestAnimationFrame(updatePosition);  // Start the animation
+    }
+
+    canvas.addEventListener("click", function (event) {
+
+      var x = event.clientX;
+      var z = event.clientY;
+      var rect = canvas.getBoundingClientRect();
+      x = x - rect.left;
+      z = z - rect.top;
+      y = z;
+
+      ctx.beginPath();
+      ctx.arc(50, 50, 40, 0, 2 * Math.PI);
+      if (ctx.isPointInPath(x, z)) {
+        moveArrow();
+      }
+
+      ctx.beginPath();
+      ctx.arc(50, 150, 40, 0, 2 * Math.PI);
+      if (ctx.isPointInPath(x, z)) {
+        moveArrow();
+      }
+      ctx.beginPath();
+      ctx.arc(50, 250, 40, 0, 2 * Math.PI);
+      if (ctx.isPointInPath(x, z)) {
+        moveArrow();
+      }
+      ctx.beginPath();
+      ctx.arc(50, 350, 40, 0, 2 * Math.PI);
+      if (ctx.isPointInPath(x, z)) {
+        moveArrow();
+      }
+    });
+
+
+  </script>
+  <button style="margin-top: 35%; margin-left: 65%;" onclick="window.location.reload();">Reset</button>
+</body>
+
+</html>
